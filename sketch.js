@@ -63,10 +63,15 @@ function bounce() {
     xSpeed *= -1;
   }
 
+  if (xBall < 0){
+    xSpeed *= -1;
+  }
+
   if (yBall < 10) {
     ySpeed *= -1;
   }
-}
+
+  }
 
 function reset() {
 xBall = Math.floor((Math.random() * 1000) + 0);
