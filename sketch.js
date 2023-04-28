@@ -60,18 +60,17 @@ function move() {
 function bounce() {
 
   if (xBall > width) {
-    xSpeed *= -1;
+    xSpeed = xSpeed*-1;
   }
 
   if (xBall < 0){
-    xSpeed *= -1;
+    xSpeed = xSpeed*-1;
   }
 
   if (yBall < 10) {
-    ySpeed *= -1;
+    ySpeed = ySpeed*-1;
   }
-
-  }
+}
 
 function reset() {
 xBall = Math.floor((Math.random() * 1000) + 0);
