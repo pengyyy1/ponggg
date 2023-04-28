@@ -37,7 +37,7 @@ function ball() {
 }
 
 function paddle() {
-  if (((yBall+width/35)-(width+height)/140 >= height/1.2) && (xBall > mouseX-width/14 && xBall < mouseX+width/14)) {
+  if (((yBall/2+width/35)-(width+height)/140 >= height/1.2) && (xBall > mouseX-width/14 && xBall < mouseX+width/14)) {
     xSpeed *= -1;
     ySpeed *= -1;
     score = score+1;
@@ -56,16 +56,16 @@ function move() {
 function bounce() {
 
   if (xBall > width) {
-    xSpeed *= -1.1;
+    xSpeed *= -1;
   }
 
   if (xBall < 0) {
-    xSpeed *= -1.1;
+    xSpeed *= -1;
     console.log(xSpeed);
   }
 
   if (yBall < 10) {
-    ySpeed *= -1.1;
+    ySpeed *= -1;
   }
 }
 
